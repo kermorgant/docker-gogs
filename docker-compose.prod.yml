@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  gogs:
+    expose:
+      - "3000"
+    env_file:
+      - /etc/docker/gogs.env
+    environment:
+      - VIRTUAL_HOST=gogs.kgtech.fi

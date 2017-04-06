@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  gogs:
+    ports:
+      - "10022:22"
+      - "10080:3000"
+    expose:
+      - "22"
+      - "3000"
+    env_file:
+      - ./gogs.priv.env
+    environment:
+      - VIRTUAL_HOST=gogs.local
